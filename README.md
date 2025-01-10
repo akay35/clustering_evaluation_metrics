@@ -1,12 +1,15 @@
 # clustering_evaluation_metrics
 
-Bu veri seti, MLB (Major League Baseball) oyuncuları ile ilgili çeşitli özellikleri içermektedir ve oyuncuların performansını değerlendiren çok sayıda istatistiği barındırır. Verinin her bir satırı bir oyuncuyu temsil eder ve sütunlar oyuncuların çeşitli performans ve demografik özelliklerini içerir.
+This dataset contains various attributes related to MLB (Major League Baseball) players and includes a wide range of statistics for evaluating their performance. Each row represents a player, and the columns contain various performance and demographic characteristics of the players.
 
-Bu çalışmada optimum küme sayısınu anlamak için çeşitli metrikler değerlendirilmiştir.
+In this study, different metrics have been evaluated to determine the optimal number of clusters.
+
 
 ---
 
 ![image](https://github.com/akay35/clustering_evaluation_metrics/blob/main/calisma1-1%20KMeansELBOW%20optimum%20cluster4.png)
+#### Elbow Method
+The Elbow Method is a commonly used technique in clustering analysis to determine the optimal number of clusters. This method calculates the sum of squared distances (inertia) for each cluster count and visualizes these values on a graph. As the number of clusters increases, the inertia decreases. However, the effect of adding more clusters on the inertia starts to diminish after a certain point. At this point, a distinct "elbow" appears on the graph. The elbow point represents the optimal number of clusters, as increasing the cluster count further results in only minimal reductions in inertia, indicating diminishing returns from adding more clusters. This method provides a visual and intuitive way to determine the optimal cluster number.
 
 ---
 
@@ -26,7 +29,8 @@ In summary, a high Silhouette Score reflects good separation and compactness of 
 #### Davies-Bouldin Score:
 The Davies-Bouldin Score measures the separation between clusters and the compactness within each cluster. It is designed to quantify how well the clustering algorithm has divided the data into distinct, well-separated groups.
 
-##### Calculation: The Davies-Bouldin Score is calculated as the average similarity ratio between each cluster and its most similar neighbor. This ratio is calculated by considering the distance between clusters (separation) and the average size of the clusters (compactness). The lower the score, the better the clustering.
+##### Calculation: 
+The Davies-Bouldin Score is calculated as the average similarity ratio between each cluster and its most similar neighbor. This ratio is calculated by considering the distance between clusters (separation) and the average size of the clusters (compactness). The lower the score, the better the clustering.
 
 ##### Interpretation of the Score:
 Low Davies-Bouldin Score (Close to 0): A score near zero indicates well-separated, compact clusters. It means that the clusters are distinct from each other, and the points within each cluster are close together. This is an indication of a successful clustering result.
